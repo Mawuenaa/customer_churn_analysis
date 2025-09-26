@@ -41,3 +41,68 @@ Predicting customer churn for a fictional telecom company using machine-learning
  'min_samples_split': 5,
  'min_samples_leaf': 4,
  'max_features': 'log2'}
+```
+---
+
+## 📈 Feature Importance (Top 2)
+| Feature  | Importance |
+| -------- | ---------- |
+| Contract | 0.2026     |
+| tenure   | 0.1194     |
+
+
+## 🚀 Quick Start
+1. Clone the repo
+
+git clone https://github.com/Mawuenaa/telco-churn-ml.git
+cd telco-churn-ml
+
+2. Create & activate a virtual environment (optional but recommended)
+
+python -m venv venv
+source venv/bin/activate        # macOS / Linux
+venv\Scripts\activate           # Windows
+
+3. Install dependencies
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+4. Launch Jupyter
+
+jupyter notebook notebooks/Telco_Churn_Prediction.ipynb
+
+## 📁 Repository Structure
+```python
+telco-churn-ml/
+│
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv   # original dataset
+│
+├── notebooks/
+│   └── Telco_Churn_Prediction.ipynb           # full end-to-end pipeline
+│
+├── README.md
+├── requirements.txt
+└── .gitignore                                 # keeps data/ out of repo (optional)
+```
+
+## 🧪 Reproducing the Results
+The notebook is self-contained:
+
+| Step | Description                                              |
+| ---- | -------------------------------------------------------- |
+| 1    | Loads & cleans the data                                  |
+| 2    | Trains 3 baseline models (RF, XGB, LGBM)                 |
+| 3    | Performs randomized hyper-parameter search on ExtraTrees |
+| 4    | Evaluates the tuned model                                |
+| 5    | Lists feature importances                                |
+
+No extra scripts needed—just run the notebook cells sequentially.
+
+## 🤝 Contributing
+1. Fork the repository
+2. Create a feature branch (git checkout -b feature/amazing-idea)
+3. Commit your changes (git commit -m 'Add amazing idea')
+4. Push to the branch (git push origin feature/amazing-idea)
+5. Open a Pull Request
